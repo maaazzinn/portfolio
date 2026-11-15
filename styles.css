@@ -136,12 +136,17 @@ a {
 }
 .menu-button {
   display: none;
+  width: 44px;
+  height: 44px;
+  place-items: center;
   color: inherit;
   background: none;
   border: 0;
+  cursor: pointer;
 }
 
 .hero {
+  min-height: 100vh;
   min-height: 100svh;
   background: var(--ink);
   color: var(--cream);
@@ -162,6 +167,7 @@ a {
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 6vw 6vw;
   mask-image: linear-gradient(to bottom, black, transparent 90%);
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 90%);
 }
 .hero-glow {
   position: absolute;
@@ -589,6 +595,7 @@ h2 em {
   flex-wrap: wrap;
 }
 .filters button {
+  min-height: 44px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: rgba(255, 255, 255, 0.55);
   background: transparent;
@@ -853,9 +860,8 @@ footer .brand {
     display: none;
   }
   .menu-button {
-    display: block;
+    display: grid;
     z-index: 2;
-    cursor: pointer;
   }
   .nav-links {
     position: fixed;
@@ -887,7 +893,7 @@ footer .brand {
   }
   .hero-title {
     margin-top: 10vh;
-    font-size: clamp(4.3rem, 21vw, 8rem);
+    font-size: clamp(4.1rem, 16vw, 8rem);
     line-height: 0.79;
   }
   .name-last {
@@ -954,7 +960,7 @@ footer .brand {
     background-size: 18vw 18vw;
   }
   .hero-title {
-    font-size: 20.5vw;
+    font-size: clamp(3.25rem, 16.5vw, 6.2rem);
   }
   .hero-bottom {
     width: 94%;
